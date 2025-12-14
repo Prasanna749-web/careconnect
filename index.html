@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareConnect – Community Help Platform</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ------------------------------------------------------------
+   GLOBAL STYLE
+------------------------------------------------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    background: #f4f8ff;
+}
+
+/* ------------------------------------------------------------
+   NAVBAR
+------------------------------------------------------------- */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    color: #333;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    color: #4A90E2;
+}
+
+.brand {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4A90E2;
+}
+
+/* ------------------------------------------------------------
+   SECTIONS
+------------------------------------------------------------- */
+section {
+    padding: 100px 8%;
+}
+h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #222;
+}
+p { margin-bottom: 10px; }
+
+/* ------------------------------------------------------------
+   HOME SECTION
+------------------------------------------------------------- */
+#home {
+    height: 100vh;
+    background: url('p1.jpg') center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#home .overlay {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+    top: 0; left: 0;
+}
+.home-content {
+    position: relative;
+    max-width: 650px;
+    animation: fadeUp 1.3s ease-in-out;
+}
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.home-content p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin: 10px 0 25px;
+}
+
+.btn {
+    padding: 14px 28px;
+    background: #4A90E2;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #2b6bb7;
+}
+
+/* ------------------------------------------------------------
+   SERVICES
+------------------------------------------------------------- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+.service-box {
+    background: rgb(213, 32, 32);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.service-box:hover {
+    transform: translateY(-6px);
+}
+
+/* ------------------------------------------------------------
+   FORM SECTION
+------------------------------------------------------------- */
+.form-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #3b7fcc;
+    color: #eeebeb;
+    font-size: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.form-btn:hover {
+    background: #007efb;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------
+   DASHBOARD
+------------------------------------------------------------- */
+.iframe-container {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------------
+   CONTACT
+------------------------------------------------------------- */
+.contact-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #111;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ------------------------------------------------------------
+   ANIMATIONS
+------------------------------------------------------------- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="navbar">
+    <div class="brand">CareConnect</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#form">Request Help</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <div class="overlay"></div>
+  <div class="home-content">
+    <h1>CareConnect</h1>
+    <p>Small Help. Big Impact.  
+       A platform connecting people who need help with those who can provide it.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+  <p>CareConnect provides quick support for common community needs.</p>
+
+  <div class="service-grid">
+    <div class="service-box">
+      <h3>Medical Assistance</h3>
+      <p>doctor info,emergency support.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Educational help</h3>
+      <p>find Tutors</p>
+    </div>
+
+    <div class="service-box">
+      <h3>other</h3>
+      <p></p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section id="form">
+  <h2>Request Help</h2>
+  <p>Click the button below to submit a help request.</p>
+
+  <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAZ0CKytUMVQwN000TVBRVUNQMkJJV1NRQkxLQUpXVy4u"
+     class="form-btn" target="_blank">
+     Open Help Request Form
+  </a>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section">
+    <h2 class="section-title">📡 Live Help Requests</h2>
+    <p class="section-subtitle">Latest responses from your Microsoft Form</p>
+    <div class="iframe-container">
+      <iframe width="402" height="346" frameborder="0" scrolling="no" src="https://1drv.ms/x/c/3DEE839D64F3EB0C/IQQt3Kw1KZm1QLN-2CQqP-55AfTYUuLhB5-jvfxQLIWM3HQ?em=2&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <p><strong>Email:</strong> careconnect.team@gmail.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Instagram:</strong> @careconnect_official</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 CareConnect — All Rights Reserved
+</footer>
+
+</body>
+<script src="script.js"></script>
+</html>
